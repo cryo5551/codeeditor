@@ -3,7 +3,7 @@
 - Editor Used --> monaco-editor :  https://www.npmjs.com/package/@monaco-editor/react
 - Api Used --> https://rapidapi.com/judge0-official/api/judge0-ce
 - And Icons from MUI Icons: https://mui.com/material-ui/api/icon/
-
+- For state Handling Context API is used.
 - All other UI is done by me no third party CSS or UI Framework is used.
 
 ### Functionality
