@@ -13,3 +13,8 @@
 - The user can add custom inputs to their code snippets, and the judge (our online compiler) will take into account the custom input which the user supplies.
 - The user can see relevant details of the code that was executed.
 - error handling is done with the help of react-toastify for better and smooth UX.
+
+### Landing page
+
+![Screenshot (67)](https://user-images.githubusercontent.com/96884049/215284069-a9fa87e6-1e94-40e5-bc07-71cf71dde9eb.png)
+
