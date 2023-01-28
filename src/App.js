@@ -3,6 +3,8 @@ import Nevbar from "./components/Nevbar";
 import { useState } from "react";
 import codeContext from "./Context";
 import Compile from "./components/Compile";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -28,7 +30,7 @@ function App() {
 
   // }
 
-  const languages = [{ "id": 62, "name": "Java" },{ "id": 50, "name": "C " },{ "id": 70, "name": "Python" },  { "id": 87, "name": "F# " }, { "id": 60, "name": "Go" }, { "id": 73, "name": "Rust" }, { "id": 54, "name": "C++" }, { "id": 63, "name": "JavaScript" }, { "id": 78, "name": "Kotlin" }, { "id": 64, "name": "Lua" }, { "id": 79, "name": "Objective-C" }, { "id": 68, "name": "PHP" },  { "id": 71, "name": "Python3" }, { "id": 80, "name": "R" }, { "id": 72, "name": "Ruby" }, { "id": 83, "name": "Swift" }, { "id": 74, "name": "TypeScript" }]
+  const languages = [{ "id": 62, "name": "Java" }, { "id": 50, "name": "C " }, { "id": 70, "name": "Python" }, { "id": 87, "name": "F# " }, { "id": 60, "name": "Go" }, { "id": 73, "name": "Rust" }, { "id": 54, "name": "C++" }, { "id": 63, "name": "JavaScript" }, { "id": 78, "name": "Kotlin" }, { "id": 64, "name": "Lua" }, { "id": 79, "name": "Objective-C" }, { "id": 68, "name": "PHP" }, { "id": 71, "name": "Python3" }, { "id": 80, "name": "R" }, { "id": 72, "name": "Ruby" }, { "id": 83, "name": "Swift" }, { "id": 74, "name": "TypeScript" }]
 
   const getCurrentLanguage = {
     "50": {
@@ -143,6 +145,10 @@ function App() {
         </div>
 
       </codeContext.Provider>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        closeOnClick />
     </div>
   );
 }

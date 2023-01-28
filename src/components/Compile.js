@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import codeContext from '../Context';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import { toast } from 'react-toastify';
 
 
 
@@ -29,10 +30,13 @@ const Compile = () => {
             const responce = await fetch('https://judge0-ce.p.rapidapi.com/submissions?base64_encoded=false&fields=*', options);
 
             const token = await responce.json();
-            getStatus(token?.token)
+            if (responce.status === 200) {
+                getStatus(token?.token)
+            } else toast.error(token.message.substring(0, 50));
+            setLoader(false);
 
         } catch (err) {
-            console.log('Error:', err);
+            toast.error("Error In Genrating token");
             setLoader(false);
         }
 
@@ -40,7 +44,6 @@ const Compile = () => {
 
 
     const getStatus = async (token) => {
-        console.log("token : " + token);
         try {
             const options = {
                 method: 'GET',
@@ -54,12 +57,14 @@ const Compile = () => {
             const responce = await fetch(`https://judge0-ce.p.rapidapi.com/submissions/${token}?base64_encoded=false`, options);
 
             const results = await responce.json();
+            if (responce.status === 200) {
+                setLoader(false);
+                setResults(results);
+            } else toast.error(results.message);
             setLoader(false);
-            console.log(results);
-            setResults(results);
 
         } catch (err) {
-            console.log("Error:", err);
+            toast.error("Error in geting Status");
             setLoader(false);
         }
 
@@ -76,13 +81,13 @@ const Compile = () => {
                 <span className='flex-container'> Output: <span className={(results?.status?.id === 3) ? "status-success" : "status-error"}>{results?.status?.description} </span></span>
             </div>
             <div className='stdopt'>
-            {(loader) ? <span className='statatics'> compiling... </span> : ""}
-            {(results.time) ? <span className={(loader)?"hide":'statatics'}>Finished in {results.time} ms || memory taken: {results.memory} kb</span> :""}
-                {(loader)? "":results?.stdout?.split("\n").map(e => <p key={e}>{e}</p>)}
+                {(loader) ? <span className='statatics'> compiling... </span> : ""}
+                {(results.time) ? <span className={(loader) ? "hide" : 'statatics'}>Finished in {results.time} ms || memory taken: {results.memory} kb</span> : ""}
+                {(loader) ? "" : results?.stdout?.split("\n").map(e => <p key={e}>{e}</p>)}
                 <br />
                 <br />
-                    
-                    
+
+
                 <p>{results?.message}</p>
             </div>
 
