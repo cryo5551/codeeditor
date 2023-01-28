@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&family=Source+Code+Pro&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +20,132 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.nevbar{
+  background-color: #fcfafa;
+  color: rgb(44, 44, 44);
+  border-bottom: 1px solid rgb(222, 221, 221);
+  padding: 0.6rem 1rem;
+  font-family: 'Nova Flat', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-container{
+  display: flex;
+  align-items: center;
+}
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(4, 173, 83);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  padding: 0.56rem 1rem;
+  font-size: 14px;
+}
+
+.btn-ctrl{
+  padding: 0.4rem 1rem;
+  margin: 0.5rem;
+  display: flex;
+  width: 60vw;
+  align-items: center;
+  justify-content:flex-end;
+}
+
+.selctor{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem 0.1rem;
+  font-size: 14px;
+  outline: none;
+  min-width:3rem;
+  border: 0.1rem solid rgb(164, 157, 157);
+  border-radius: 5px;
+
+}
+
+.main-container{
+  display: flex;
+  width: 100vw;
+  /* justify-content: space-between; */
+}
+
+
+.console-bar{
+  background-color: #f3f3f3;
+  color: rgb(44, 44, 44);
+  /* border-bottom: 1px solid rgb(188, 188, 188); */
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0.1px 2px #d9d8d8;
+}
+
+textarea{
+  outline: none;
+  border: none;
+  border-top: 0.1rem solid rgb(164, 157, 157);
+  padding: 0.5rem;
+
+}
+
+.stdopt{
+  width: 100%;  
+  height: 50vh;
+  overflow-y: auto;
+  padding: 1rem;
+  font-family: 'Source Code Pro', monospace;
+  background-color: #e5e5e5;
+  font-size: 0.92rem;
+}
+
+
+.status-success{
+  background-color: rgb(4, 173, 83);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  padding: 0.3rem 0.8rem 0.4rem 0.8rem ;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0.69rem;
+}
+.status-error{
+  border: none;
+  border-radius: 16px;
+  color: rgb(245, 66, 66);
+  /* padding: 0.3rem 0.8rem 0.4rem 0.8rem ; */
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0.69rem;
+}
+
+.btn-position{
+  position: fixed;
+  top: 3.65rem;
+  left: 2rem;
+}
+
+
+.statatics{
+  color: rgb(13, 159, 69);
+  font-size: 0.92rem;
+}
+
+
+.hide{
+  display: none;
+}
+
+option{
+  margin: 5px 10px;
 }
