@@ -2,6 +2,9 @@
 - its a code editor (leetcode UI based);
 - Editor Used --> monaco-editor :  https://www.npmjs.com/package/@monaco-editor/react
 - Api Used --> https://rapidapi.com/judge0-official/api/judge0-ce
+- And Icons from MUI Icons: https://mui.com/material-ui/api/icon/
+
+- All other UI is done by me no third party CSS or UI Framework is used.
 
 ### Functionality
 - Upon lending user can select their preferred programming languages (default is JavaScript).
