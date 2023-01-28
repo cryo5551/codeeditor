@@ -3,7 +3,7 @@ import Nevbar from "./components/Nevbar";
 import { useState } from "react";
 import codeContext from "./Context";
 import Compile from "./components/Compile";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
