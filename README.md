@@ -1,6 +1,7 @@
 ### LetsCode : https://getscode.netlify.app/
 - its a code editor (leetcode UI based);
-- for the Editor partmonaco-editor is used:  https://www.npmjs.com/package/@monaco-editor/react
+- Editor Used --> monaco-editor :  https://www.npmjs.com/package/@monaco-editor/react
+- Api Used --> https://rapidapi.com/judge0-official/api/judge0-ce
 
 ### Functionality
 - Upon lending user can select their preferred programming languages (default is JavaScript).
