@@ -30,7 +30,7 @@ const Compile = () => {
             const responce = await fetch('https://judge0-ce.p.rapidapi.com/submissions?base64_encoded=false&fields=*', options);
 
             const token = await responce.json();
-            if (responce.status === 200) {
+            if (responce.status === 201) {
                 getStatus(token?.token)
             } else toast.error(token.message.substring(0, 50));
             setLoader(false);
@@ -57,7 +57,7 @@ const Compile = () => {
             const responce = await fetch(`https://judge0-ce.p.rapidapi.com/submissions/${token}?base64_encoded=false`, options);
 
             const results = await responce.json();
-            if (responce.status === 201) {
+            if (responce.status === 200) {
                 setLoader(false);
                 setResults(results);
             } else toast.error(results.message);
