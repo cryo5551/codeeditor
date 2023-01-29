@@ -57,11 +57,8 @@ const Compile = () => {
             const responce = await fetch(`https://judge0-ce.p.rapidapi.com/submissions/${token}?base64_encoded=false`, options);
 
             const results = await responce.json();
-            if (responce.status === 200) {
                 setLoader(false);
                 setResults(results);
-            } else toast.error(results.message);
-            setLoader(false);
 
         } catch (err) {
             toast.error("Error in geting Status");
